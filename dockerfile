@@ -3,13 +3,13 @@ FROM node
 WORKDIR /app/shopping-cart
 
 # Copia el package.json al contenedor
-COPY shopping-cart/package*.json ./
+COPY package*.json ./
 
 # Instala las dependencias
 RUN npm install -g pm2 
 
 # Copia el resto de los archivos
-COPY shopping-cart/ ./
+COPY . .
 
 EXPOSE 3002
 
